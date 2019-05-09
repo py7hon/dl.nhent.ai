@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^dl/([^/]*)$ index.php?dl=$1 [L]
+RewriteRule ^dl/([^/]*)$ index.php?dl=$1 [L]
+RewriteRule ^ext/([^/]*)$ ekstensi.php?g=$1 [L]
