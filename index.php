@@ -49,7 +49,7 @@ for ($i= 1; $i <= count($json_data3); $i++) {
 <meta name="author" content="Iqbal Rifai" />
 <meta charset="utf-8" />
 <meta property="og:title" content="Download <?php echo $json_data2['title']['pretty'];?>.zip - nHtai" />
-<meta property="og:url" content="https://dl.nhent.ai/dl/<?php echo $json_data2['id'];?>" />
+<meta property="og:url" content="https://<?php echo $_SERVER['SERVER_NAME'];?>/dl/<?php echo $json_data2['id'];?>" />
 <meta property="og:image" content="https://t.nhent.ai/galleries/<?php echo $json_data2['media_id'];?>/thumb.<?php echo $json_data3[1];?>" />
 <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
 <link rel='dns-prefetch' href='//stuk.github.io' />
