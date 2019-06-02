@@ -44,7 +44,7 @@ for ($i= 1; $i <= count($json_data3); $i++) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Download <?php echo $json_data2['title']['pretty'];?></title>
+<title>Download <?php echo $json_data2['title']['pretty'];?>.zip - nHtai</title>
 <meta name="api" key="<?php echo $json_data2['id'];?>/<?php echo $json_data2['media_id'];?>/<?php echo $json_data2['num_pages'];?>/<?php echo generateRandomString();?>/<?php echo $json_data2['title']['pretty'];?>" action="GET" website="https://nhent.ai" />
 <meta name="author" content="Iqbal Rifai" />
 <meta charset="utf-8" />
@@ -72,7 +72,7 @@ for ($i= 1; $i <= count($json_data3); $i++) {
 <script type="text/javascript" src="//stuk.github.io/jszip-utils/dist/jszip-utils.js"></script>
 <script type="text/javascript" src="//stuk.github.io/jszip/vendor/FileSaver.js"></script>
 <script type="text/javascript">"use strict";$(document).ready(function(){var $status=$("#status");function updateStatus(text,error){$status.text(text);if(error){$status.parent().addClass("text-danger");$progress.addClass("bg-danger")}else{$status.parent().removeClass("text-danger");$progress.removeClass("bg-danger")}}var urls=[<?php for ($i=1; $i <= $json_data2["num_pages"]; $i++){echo "'";echo "https://cdn.nhent.ai/galleries/";echo $json_data2['media_id'];echo"/";echo $i;echo ".";print $json_data3[$i];echo"'";echo ",";echo"\n";}?>];var nama="<?php echo $json_data2['title']['pretty'];?> ♥ nHentai";function updatePercent(percent){$("#progress_bar").removeClass("hide").find(".progress-bar").attr("aria-valuenow",percent).css({width:percent+"%"})}var zip=new JSZip();var count=0;var name=nama+".zip";urls.forEach(function(url){JSZipUtils.getBinaryContent(url,function(err,data){if(err){throw err}var filename=url.replace(/.*\//g,'');var img=zip.folder("<?php echo $json_data2['title']['pretty'];?>");img.file("Read Me FIRST.txt","Download from https://dl.nhent.ai/g/<?php echo $json_data2['id'];?> \n Dont Forget to join discord: https://discord.gg/y6kurbu").file(filename,data,{binary:true});count+=1;if(count==urls.length){zip.generateAsync({type:'blob'}).then(function(content){updateStatus("Success!");saveAs(content,name)})}})})});</script>
-<script type="text/json" name="api" key="<?php echo $json_data2['id'];?>/<?php echo $json_data2['media_id'];?>/<?php echo $json_data2['num_pages'];?>/<?php echo generateRandomString();?>/<?php echo $json_data2['title']['pretty'];?>"><?php print json_encode($json_data2);?></script>
+<script type="application/ld+json" name="api" key="<?php echo $json_data2['id'];?>/<?php echo $json_data2['media_id'];?>/<?php echo $json_data2['num_pages'];?>/<?php echo generateRandomString();?>/<?php echo $json_data2['title']['pretty'];?>"><?php print json_encode($json_data2);?></script>
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4260016,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
