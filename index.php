@@ -8,7 +8,7 @@ header('Pragma: no-cache');
 header('Cache-Control: no-cache');
 header('Content-Transfer-Encoding: binary');
 header('X-Powered-By: HHVM/3.18.6-dev');
-$id= $_GET['dl'];
+$id = $_GET['dl'];
 if($id) {
 $url2 = "https://nhentai.net/api/gallery/$id";
 $url3 = "https://dl.nhent.ai/ext/$id";
